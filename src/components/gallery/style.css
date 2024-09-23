@@ -1,0 +1,19 @@
+/* style.css */
+
+.gallery img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 0.8; /* Slight opacity change */
+  }
+  .gallery h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6d4c41; /* Coffee brown */
+    padding-bottom: 20px;
+    border-bottom: 5px solid #ff7043; /* Line color */
+    display: inline-block; /* To make sure the border is only as wide as the text */
+}

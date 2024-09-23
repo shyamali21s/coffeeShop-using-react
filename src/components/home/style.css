@@ -1,0 +1,18 @@
+.home{
+    background-color: var( --yellow-theme-background-color);
+}
+
+
+@media (max-width: 768px) {
+    .home {
+        padding: 8px; /* Less padding on smaller screens */
+        margin-top: 40px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .MuiGrid-item {
+        flex: 1 1 50%; /* Allow two items per row on larger screens */
+    }
+}

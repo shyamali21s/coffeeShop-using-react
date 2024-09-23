@@ -1,0 +1,131 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #f8eeee;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.about-section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6d4c41; /* Coffee brown */
+    padding-bottom: 20px;
+    border-bottom: 5px solid #ff7043; /* Line color */
+    display: inline-block; /* To make sure the border is only as wide as the text */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start (top) */
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 40px;
+    gap: 20px;
+    min-height: 400px; /* Ensures that both the text and image container are the same height */
+}
+
+.about-image-container {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    height: 100%; /* Ensures the image takes the full height of its container */
+}
+
+.about-text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the content vertically */
+    padding-left: 20px;
+}
+
+.about-text-container p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.social-media h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #6d4c41; /* Coffee brown */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.social-icons a {
+    color: #6d4c41; /* Set the icon color */
+    font-size: 2.0rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff7043; /* Change color on hover */
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+    .about-container {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+        height: auto; /* Makes sure the image scales appropriately */
+    }
+
+    .about-text-container {
+        text-align: center;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .about-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .social-media h4 {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}

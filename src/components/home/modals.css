@@ -1,0 +1,47 @@
+/* Modal Styles */
+.modals {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    max-width: 90%; /* Use max-width to adjust size based on screen width */
+    width: 400px; /* Default width */
+    margin: auto; /* Center the modal horizontally */
+}
+
+/* Title Styles */
+.modals .MuiTypography-h6 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Control Styles */
+.modals .form {
+    margin-bottom: 15px;
+    background-color: rgb(233, 147, 34);
+}
+
+.modals .MuiSelect-root,
+.modals .MuiInputBase-root {
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.modals .MuiButton-root {
+    width: 100%;
+    background-color: #6e6706;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modals {
+        width: 90%; /* Take up most of the screen width on smaller devices */
+        max-width: 350px; /* Maximum width for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .modals {
+        width: 300px; /* Keep the modal width fixed for larger screens */
+    }
+}

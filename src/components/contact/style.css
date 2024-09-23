@@ -1,0 +1,227 @@
+/* Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* About Us Section */
+.contact-section {
+    background-color: #eec9c9;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.contact-section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6d4c41; /* Coffee brown */
+    padding-bottom: 20px;
+    border-bottom: 5px solid #ff7043; /* Line color */
+    display: inline-block; /* To make sure the border is only as wide as the text */
+}
+
+/* Social Icons Section */
+.social-icons-contact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.social-media-contact {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.social-icons-contact a {
+    color: #6d4c41; /* Set the icon color */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons-contact a:hover {
+    color: #ff7043; /* Change color on hover */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start (top) */
+    width: 100%;
+    max-width: 1200px; /* Adjusted for container width */
+    padding-top: 40px;
+    gap: 20px;
+    min-height: 400px; /* Ensures that both the text and image container are the same height */
+    flex-direction: row-reverse;
+}
+
+/* Form Styles */
+.contact_content_form {
+    margin-top: 30px;
+}
+
+.contact_content_form_controlasWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Wrapper */
+.contact_content_form_controlasWrapper div {
+    position: relative;
+    margin-left: 10px;
+}
+
+/* Input fields */
+.inputName,
+.inputEmail,
+.inputDescription {
+    width: 100%;
+    border: 2px solid #20095e;
+    padding: 16px 12px;
+    background-color: transparent;
+    color: var(--yellow-theme-nav-background-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Placeholder for the floating label technique */
+.inputName::placeholder,
+.inputEmail::placeholder,
+.inputDescription::placeholder {
+    color: transparent;
+}
+
+/* Labels */
+.namelabel,
+.emaillabel,
+.Descriptionlabel {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    font-size: 1.5rem;
+    color: var(--yellow-theme-sub-text-color);
+    pointer-events: none; /* Prevents the label from being clicked */
+}
+
+/* Move label up when input is focused or has text */
+.inputName:focus ~ .namelabel,
+.inputName:not(:placeholder-shown) ~ .namelabel,
+.inputEmail:focus ~ .emaillabel,
+.inputEmail:not(:placeholder-shown) ~ .emaillabel,
+.inputDescription:focus ~ .Descriptionlabel,
+.inputDescription:not(:placeholder-shown) ~ .Descriptionlabel {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--yellow-theme-nav-background-color);
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 70px;
+    font-size: 1.5rem;
+    background: transparent;
+    color: #e68d08;;
+    border: 0.5px solid #ca7118;
+    border-radius: 4px;
+    font-weight: 400;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    color: #000;
+    background: var(--yellow-theme-main-color);
+}
+
+/* Responsive Styling for Small Screens */
+@media only screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact_content_form_controlasWrapper {
+        grid-template-columns: repeat(1, 1fr); /* Single column for form fields */
+        gap: 20px; /* Reduced gap for smaller screens */
+    }
+
+    .contact-section h3 {
+        font-size: 2rem; /* Adjusted heading size for smaller screens */
+    }
+
+    button {
+        font-size: 1.2rem; /* Adjust button text size */
+        padding: 8px 50px; /* Adjust button padding */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contact-container {
+        padding: 20px 10px; /* Reduced padding for mobile screens */
+    }
+
+    .contact-section h3 {
+        font-size: 1.8rem; /* Further adjust heading size for small mobile screens */
+    }
+
+    button {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding: 6px 40px;
+    }
+
+    .inputName,
+    .inputEmail,
+    .inputDescription {
+        font-size: 1rem; /* Reduce input field font size for mobile */
+    }
+
+    .namelabel,
+    .emaillabel,
+    .Descriptionlabel {
+        font-size: 0.9rem; /* Reduce label size for mobile */
+    }
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add some padding */
+}
+
+/* Centering icons */
+.footer .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    flex-grow: 1; /* Allow this section to grow */
+}
+
+.footer .copyright {
+    margin-left: auto; /* Push copyright to the right */
+}
+
+/* Optional: Add some styles for social media icons */
+.footer a {
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s;
+    margin: 0 10px; /* Add spacing between icons */
+}
+
+.footer a:hover {
+    color: #f8bb12; /* Change color on hover */
+}
