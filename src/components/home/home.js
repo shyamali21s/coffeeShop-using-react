@@ -20,7 +20,7 @@ function Home() {
     const items = [
         {
             id: '1',
-            title:'The Brew Coffeeshop',
+            title:'The Brew Spot',
             subtitle: ['Start your day with us', 'Brewed to perfection'],
             description: 'Welcome to our coffee shop, explore a variety of coffee here..',
             coverUrl: coffe,
